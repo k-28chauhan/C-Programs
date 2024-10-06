@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main()
+int main()    //convert all 0's to 1's and vice-versa in a given number
 {
     int number,result=0,digit,place=1;
     printf("Enter a num ");
