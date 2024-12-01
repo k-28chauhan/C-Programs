@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+    char string1[50], string2[50];
+    printf("Enter first string");
+    gets(string1);
+    printf("Enter second string");
+    gets(string2);
+    int len1 = strlen(string1);
+    int len2 = strlen(string2);
+    int count = 0;
+    if(len1 != len2){
+        printf("Not equal");
+    }
+    else{
+        for(int i=0;i<len1;i++){
+            if(string1[i] != string2[i]){
+                printf("String are not equal");
+                break;
+            }
+            else{
+                printf("String are equal");
+                break;
+            }
+        }
+    }
+}

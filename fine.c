@@ -1,26 +1,15 @@
 #include <stdio.h>
+#include <string.h>
 
-int main()
-{
-    int days;
-    double fine;
-    printf("Enter the no. of days");
-    scanf("%d", &days);
-    if(days<=5)
-    {
-        fine=0.5*days;
-        printf("%.2f", fine);
+int main(){
+    char string[]="Karaninder";
+    int len=strlen(string);
+    int i=0;
+    while(string[i]!='\0'){
+        if(string[i]>='a'&&string[i]<='z'){
+            string[i]=string[i]-32;
+        }
+        i++;
     }
-    else if(days>5 && days<=10){
-        fine = 1*days;
-        printf("%.2f", fine);
-    }
-    else if(days>10 && days<=30)
-    {
-        fine = 5*days;
-        printf("%.2f", fine);
-    }
-    else{
-        printf("your membership is cancelled");
-    }
+    printf("String is %s",string);
 }

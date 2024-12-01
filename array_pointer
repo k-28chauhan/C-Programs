@@ -1,0 +1,40 @@
+#include <stdio.h>
+#define row 3
+#define col 3
+void matrixAddition(int mat1[][col], int mat2[][col], int res[][col]){
+    int i,j;
+    for(i=0;i<row;i++){
+        for(j=0;j<col;j++){
+            res[i][j] = mat1[i][j] + mat2[i][j];
+        }
+    }
+}
+
+void printMatrix(int mat[][col]){
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            printf("%d",mat[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main(){
+    printf("enter first matrix");
+    int mat1[row][col], mat2[row][col];
+    int res[row][col];
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            scanf("%d", &mat1[i][j]);
+        }
+    }
+    printf("enter second matrix");
+    for(int i=0;i<row;i++){
+        for(int j=0;j<col;j++){
+            scanf("%d", &mat2[i][j]);
+        }
+    }
+    matrixAddition(mat1, mat2, res);
+    printMatrix(res);
+    return 0;
+}
